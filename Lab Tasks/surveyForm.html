@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Survey Form</title>
+</head>
+<style>
+    form {
+        background-color: #adeee7;
+        width: 600px;
+        border-radius: 10px;
+        padding: 15px;
+        margin-left: 20px;
+    }
+
+    section {
+        border: solid 1px black;
+        border-radius: 10px;
+        padding: 15px;
+        height: auto;
+        width: 400px;
+        margin-left: 150px;
+    }
+
+    h3 {
+        text-decoration: underline;
+    }
+
+    input {
+        border-radius: 10px;
+        border-color: aliceblue;
+        background-color: #adeee7;
+        padding: 7px;
+    }
+</style>
+<body>
+
+    <h3 style="text-align: center; color: green;">Wellcom to student survey form!</h3>
+
+    <div style="margin: 20px;">
+        <form action="/survey-submit" method="POST">
+            <h3>Section 01: Personal Information</h3>
+            <section>
+                <label for="name">Full Name:</label>
+                <input type="text" placeholder="name here..." required>
+                <br><br>
+
+                <label for="email">Email Address:</label>
+                <input type="email" placeholder="email here..." required>
+                <br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" required>
+                <br><br>
+
+                <label for="age">Age:</label>
+                <input type="number" placeholder="your age..." required>
+                <br><br>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" placeholder="date of birth" required>
+                <br><br>
+
+                <label for="ph">Ph Number:</label>
+                <input type="tel" placeholder="phone number..." required>
+                <br><br>
+            </section>
+
+            <h3>Section 02: Preference</h3>
+            <section>
+                <label for="gender">Gender:</label> 
+                <br>
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+                <input type="radio" name="gender"> Other
+
+                <br><br>
+
+                <label for="hoob">Hobbies</label>
+                <br>
+                <input type="checkbox" name="reading"> Reading
+                <input type="checkbox" name="sports"> sports
+                <input type="checkbox" name="Traveling"> Traveling
+                <input type="checkbox" name="coding"> Coding
+                <input type="checkbox" name="cooking"> Cooking
+
+                <br><br>
+
+                <label for="fcolor">Select your Fav Color:</label>
+                <br>
+                <select style="background-color: #adeee7;" required>
+                    <option selected>Chose your fav Color below:</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Green</option>
+                    <option>Yellow</option>
+                </select>
+
+                <br><br>
+
+                <label for="happiness">Range Your Happiness</label> 
+                <input type="number" min="1" max="10" placeholder="selecr 1 to 10">
+                <input type="range" required>
+            </section>
+
+            <h3>Section 03: Feedback</h3>
+
+            <section>
+                <label for="feed">Your message About Us:</label> 
+                <br>
+                <textarea style="background-color: #adeee7; border-radius: 10px;" name="fbmessage" placeholder="Feedback here..." cols="20" rows="10"></textarea>
+
+                <br><br>
+
+                <label for="file">Upload a File</label> 
+                <input type="file" required>
+
+                <br><br>
+
+                <label for="id">Your ID</label>
+                <input type="hidden" placeholder="No Worries it should be hide!" required>
+            </section>
+
+            <br><br>
+
+            <h3>Submission</h3>
+            <section>
+                i'm sure that the above info is valid and not coppied from any others<input type="checkbox" required>
+
+                <br><br>
+
+                <div style="text-align: center;">
+                    <input style="color: rgb(97, 34, 34); font-size: larger; width: 100px; cursor: pointer; margin-right: 40px;" type="submit" required>
+                    <input style="color: rgb(255, 0, 0); font-size: larger; width: 100px; cursor: pointer;" type="reset" required>
+                </div>
+            </section>
+        </form>
+    </div>
+</body>
+</html>
