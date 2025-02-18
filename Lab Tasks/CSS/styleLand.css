@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+
+/* Navigation Bar */
+
+.nav-bar {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(213, 193, 193);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px black;
+}
+
+.logo {
+    margin: 20px 0 20px 100px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    margin: 20px;
+}
+
+.nav-links li {
+    cursor: pointer;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:visited {
+    color: purple;
+    text-decoration: underline;
+}
+
+.nav-links li:hover {
+    background-color: rgb(62, 136, 82);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    height: auto;
+    width: auto;
+}
+
+.nav-links a:active {
+    background-color: rgb(62, 136, 82);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.nav-links a:focus {
+    background-color: rgb(62, 136, 82);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.user {
+    margin: 20px 100px 20px 0;
+    cursor: pointer;
+}
+
+/* Hero Section */
+
+.hero {
+    background-image: url('/assets/Lab03hm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.heroTxt {
+    margin: 200px 0 0 100px;
+    background-color: rgb(132, 132, 89);
+    width: 500px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.largTxt {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(132, 145, 156);
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* About Section */
+
+.about {
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section-top {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+}
+
+.about-img {
+    height: 380px;
+    width: 1500px;
+    background-image: url('/assets/Lab03hm.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.details {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.details h3 {
+    color: rgb(117, 139, 159);
+    font-size: larger;
+    font-weight: bolder;
+}
+
+/* Popular Subjects */
+
+.subjBox {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 80px 100px 100px 200px;
+    padding: 20px;
+}
+
+.subj {
+    height: 150px;
+    width: 250px;
+    background-color: rgb(71, 136, 136);
+    text-align: center;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.subj .dp {
+    height: 60px;
+    width: 60px;
+    background-image: url(/assets/Lab03hm.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    margin: 20px 0 0 90px;
+}
+
+/* Our Famous Courses */
+
+.fm-courses {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 80px 150px 100px 150px;
+    padding: 20px;
+}
+
+.card-details {
+    width: auto;
+    height: auto;
+    border: solid 1px rgb(255, 255, 255);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: url(/assets/Lab03hm.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner .type {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: auto;
+    height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+
+.banner .price {
+    position: absolute;
+    top: 150px;
+    right: 5px;
+    width: 50px;
+    height: 35px;
+    padding-top: 15px;
+    border-radius: 50px;
+    background-color: rgb(71, 136, 136);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+}
+
+.name {
+    margin-top: 10px;
+}
