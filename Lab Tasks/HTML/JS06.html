@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Engineering Lab 06</title>
+</head>
+<body>
+
+    <h3>Lab 06 Basic JavaScript:</h3>
+
+
+    <!-- Task 01 Car Parking Tool System-->
+    <!-- <script>
+
+        let numberHours;
+
+        numberHours = parseInt(prompt("Number of Housr"))
+
+        console.log("Hours Parked: " + numberHours);
+
+
+        let vip = confirm("Are You a VIP? Yes/No!")
+
+        console.log("VIP Customer: " + vip);
+            
+
+        let hourRate = 0;
+
+        if (numberHours <= 2) {
+            hourRate = 5;
+            let total = console.log("Total Fee: $" + hourRate * numberHours);
+            
+        } 
+        else if(numberHours >= 3) {
+            hourRate = 4;
+            let total = console.log("Total Fee: $" + hourRate * numberHours);
+
+        }
+        else {
+            hourRate = 3;
+            let total = console.log("Total Fee: $" + hourRate * numberHours);
+
+        }
+
+        if (vip) {
+            let total = console.log("VIP discount Fee: $" + (hourRate * numberHours) * 0.8)
+        }
+
+    </script> -->
+
+
+
+    <!-- Task 02 Loan Interest Calculator-->
+    <!-- <script>
+            let loanAmount = parseInt(prompt("Enter Loan Amount: "));
+    
+            let interestRate = 0;
+            let interest = 0;
+            let total = 0;
+    
+            if (loanAmount <= 10000) {
+                interestRate = 0.05;
+                console.log("Interest Rate: 5%");
+            } 
+            else if (loanAmount >= 50000) {
+                interestRate = 0.04;
+                console.log("Interest Rate: 4%");
+            } 
+            else {
+                interestRate = 0.035;
+                console.log("Interest Rate: 3.5%");
+            }
+    
+            interest = loanAmount * interestRate;
+            total = loanAmount + interest;
+    
+            console.log("Loan Amount: $" + loanAmount);
+            console.log("Interest: $" + interest);
+            console.log("Total Payable: $" + total);
+
+    </script> -->
+
+
+    <!-- Task 03 Shopping Discount System -->
+    <script>
+
+        let shoppingAmount = parseInt(prompt("Your Shopping Amount: "));
+
+        let discount = 0;
+        let total = 0;
+
+        if (shoppingAmount < 100) {
+            discount = 0;
+            console.log("Discount Applied: 0%");
+        } 
+        else if (shoppingAmount >= 100 && shoppingAmount <= 500) {
+            discount = 0.1;
+            console.log("Discount Applied: 10%");
+        } 
+        else {
+            discount = 0.15;
+            console.log("Discount Applied: 15%");
+        }
+
+        let discountAmount = shoppingAmount * discount;
+        total = shoppingAmount - discountAmount;
+
+        console.log("Shopping Amount: $" + shoppingAmount);
+        console.log("Discount Amount: $" + discountAmount);
+        console.log("Total Payable: $" + total);
+
+
+    </script>
+
+
+    <!-- Task 04 Employee Salary Calculator -->
+    <script>
+
+        let yearExperience = parseInt(prompt("Your Year of Experience: "));
+
+        let bonus = 0;
+        let baseSalary = 1000;
+        let totalSalary = 0;
+
+        if (yearExperience > 5) {
+            bonus = 500;
+            console.log("Bonus Applied: $500");
+        } 
+        else {
+            bonus = 0;
+        }
+
+        totalSalary = baseSalary + bonus;
+
+        console.log("Year of Experience: " + yearExperience + " Years");
+        console.log("Base Salary: $" + baseSalary);
+        console.log("Total Salary: $" + totalSalary);
+    
+    </script>
+
+
+    <!-- Task 05 String Manipulation -->
+    <script>
+
+        let name = prompt("Enter Employee Name:");
+
+        let upperCaseName = name.toUpperCase();
+
+        let lowerCaseName = name.toLowerCase();
+
+        let hyphenatedName = name.replace(" ", "-");
+
+        let firstThreeLetters = name.substring(0, 3);
+
+        console.log("Uppercase: " + upperCaseName);
+        console.log("Lowercase: " + lowerCaseName);
+        console.log("Hyphenated: " + hyphenatedName);
+        console.log("First Three Letters: " + firstThreeLetters);
+
+    </script>
+    
+    
+</body>
+</html>
