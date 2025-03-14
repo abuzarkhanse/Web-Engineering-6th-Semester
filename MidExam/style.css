@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(192, 183, 171);
+}
+
+.nav-bar {
+    position: sticky;
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    color: wheat;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-links ul {
+    margin: 25px 40px 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+.nav-links a {
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    background-color: rgb(192, 183, 171);
+    color: black;
+    border-radius: 5px;
+}
+
+.btn {
+    margin: 15px 30px 0 0;
+    height: 20px;
+    width: 60px;
+    padding: 12px;
+    border: solid 1px white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.hero-section {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-section img {
+    margin-left: 40px;
+    height: 335px;
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+form {
+    background-color: rgb(102, 97, 90);
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0.8;
+    width: 100%;
+    height: 300px;
+}
+
+form label {
+    text-align: left;
+}
+
+form input {
+    border-radius: 5px;
+    border: solid 1px black;
+    padding: 7px;
+    margin-bottom: 10px;
+}
+
+.regbtn {
+    position: relative;
+    width: 400px;
+}
+
+.login-access a {
+    color: rgb(131, 109, 109);
+    font-weight: bold;
+}
+
+.login-access a:hover {
+    color: white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 40px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-bar .btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        cursor: pointer;
+    }
+
+    .hero-section {
+        display: block;
+        margin: 150px 20px 0 20px;
+    }
+
+    .hero-section img {
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .hero-section form {
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+}

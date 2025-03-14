@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt</title>
+</head>
+<body>
+
+    <script>
+
+        // JavaScript Question 01
+
+        let fname;
+        let lname;
+
+        fname = prompt("Enter Your First Namee");
+        lname = prompt("Enter Your First Namee");
+
+        let uFname = fname.toUpperCase();
+        let uLname = lname.toUpperCase();
+
+        console.log("Your Name in UperCase: " + uFname, uLname);
+        
+
+        // JavaScript Question 02
+
+        let start = parseInt(prompt("Enter the starting number:"));
+        let end = parseInt(prompt("Enter the ending number:"));
+
+        console.log("Even numbers between " + start + " and " + end + " are:");
+        
+        if (start % 2 !== 0) {
+                start++;
+            }
+            
+        for (let i = start; i <= end; i += 2) {
+            console.log(i);
+        }
+
+    </script>
+    
+</body>
+</html>
