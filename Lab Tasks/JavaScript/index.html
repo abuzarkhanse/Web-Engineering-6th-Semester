@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST | Web Engineering Lab 08</title>
+
+    <style>
+        .list-frame {
+            position: relative;
+            margin: 50px auto;
+            width: 50%;
+            border: solid 3px black;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .WhatToDo {
+            margin-bottom: 15px;
+        }
+
+        #toDo {
+            margin-top: 10px;
+            padding: 10px;
+            border-top: solid 2px red;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 8px;
+            margin: 5px 0;
+            border-left: 4px solid blue;
+            border-radius: 5px;
+        }
+
+        .delete-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .delete-btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <h3 style="text-align: center;">To-Do List</h3>
+
+    <div class="list-frame">
+        <div class="WhatToDo">
+            <form onsubmit="addElement(event)">
+                <label for="tName">Task Name:</label>
+                <input type="text" id="tName" placeholder="What to Do..?" required>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        <div id="toDo"></div>
+    </div>
+
+    <script>
+        function addElement(event) {
+            event.preventDefault();
+
+            let inputField = document.getElementById("tName");
+            let inputValue = inputField.value.trim();
+
+            let task = document.createElement("div");
+                task.className = "task";
+                
+                let taskText = document.createElement("span");
+                taskText.textContent = inputValue;
+
+                let deleteButton = document.createElement("button");
+                deleteButton.textContent = "Remove";
+                deleteButton.className = "delete-btn";
+                deleteButton.onclick = function() {
+                    task.remove();
+                };
+
+                task.appendChild(taskText);
+                task.appendChild(deleteButton);
+
+                document.getElementById("toDo").appendChild(task);
+
+                inputField.value = "";
+            
+        }
+    </script>
+    
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+</head>
+<body>
+
+    <h3>To-Do List</h3>
+
+    <div>
+        <form onsubmit="addElement(event)">
+            <label for="tName">Task:</label>
+            <input type="text" id="tName" placeholder="Enter a task" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <ul id="toDo"></ul>
+
+    <script>
+        function addElement(event) {
+            event.preventDefault();
+
+            let inputField = document.getElementById("tName");
+            let inputValue = inputField.value.trim();
+
+            if (inputValue !== "") {
+                let li = document.createElement("li");
+                li.textContent = inputValue + " ";
+
+                let deleteButton = document.createElement("button");
+                deleteButton.textContent = "Remove";
+                deleteButton.onclick = function() {
+                    li.remove();
+                };
+
+                li.appendChild(deleteButton);
+                document.getElementById("toDo").appendChild(li);
+
+                inputField.value = ""; // Clear input
+            }
+        }
+    </script>
+    
+</body>
+</html> -->
+
