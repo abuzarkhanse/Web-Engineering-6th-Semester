@@ -1,0 +1,19 @@
+.stdCard {
+    display: flex;
+    gap: 15px;
+    height: auto;
+    margin: 10px;
+}
+
+.card {
+    width: 40%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  
