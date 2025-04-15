@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body { 
+            font-family: Arial; 
+            margin: 40px; 
+        }
+        
+        label { 
+            display: block; 
+            margin-top: 10px; 
+        }
+        
+        input, select { 
+            padding: 5px; 
+            width: 250px; 
+        }
+
+        .error { 
+            color: red; 
+            font-size: 14px; 
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+    
+    <form onsubmit="return validateForm()">
+        <label>Name:</label>
+        <input type="text" id="name" />
+        <div class="error" id="nameError"></div>
+
+        <label>Email:</label>
+        <input type="text" id="email" />
+        <div class="error" id="emailError"></div>
+
+        <label>Password:</label>
+        <input type="password" id="password" />
+        <div class="error" id="passwordError"></div>
+
+        <label>Confirm Password:</label>
+        <input type="password" id="confirmPassword" />
+        <div class="error" id="confirmPasswordError"></div>
+
+        <label>Phone Number:</label>
+        <input type="text" id="phone" />
+        <div class="error" id="phoneError"></div>
+
+        <label>Gender:</label>
+        <select id="gender">
+        <option value="">--Select Gender--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+        </select>
+        
+        <div class="error" id="genderError"></div>
+
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+        let valid = true;
+
+        document.querySelectorAll('.error').forEach(e => e.innerText = "");
+
+        let name = document.getElementById("name").value;
+        if (name.length < 3) {
+            document.getElementById("nameError").innerText = "Name must be at least 3 characters";
+            valid = false;
+        }
+
+        let email = document.getElementById("email").value;
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            document.getElementById("emailError").innerText = "Enter a valid email";
+            valid = false;
+        }
+
+        let password = document.getElementById("password").value;
+        let passRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+        if (!passRegex.test(password)) {
+            document.getElementById("passwordError").innerText = "Password must be 8+ characters, include a number and uppercase letter";
+            valid = false;
+        }
+
+        let confirmPassword = document.getElementById("confirmPassword").value;
+        if (password !== confirmPassword) {
+            document.getElementById("confirmPasswordError").innerText = "Passwords do not match";
+            valid = false;
+        }
+
+        let phone = document.getElementById("phone").value;
+        if (!/^\d{11}$/.test(phone)) {
+            document.getElementById("phoneError").innerText = "Phone number must be exactly 11 digits";
+            valid = false;
+        }
+
+        let gender = document.getElementById("gender").value;
+        if (gender === "") {
+            document.getElementById("genderError").innerText = "Please select a gender";
+            valid = false;
+        }
+
+        return valid;
+    }
+    </script>
+
+</body>
+</html>
